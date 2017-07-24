@@ -1,0 +1,61 @@
+Part 1
+
+Recursion:
+1. Recursion is when a function calls itself from within the function.
+2. It is necessary to have a base case so that the
+function knows when to stop calling itself.
+Bad things that can happen without base cases include
+infinite loops and running out of memory.
+
+
+Graphs:
+1. A graph in this context is a computer science data structure.
+It has various nodes containing data that have pointers to other nodes.
+A node can have many pointers or no pointers.
+2. A tree is a more structured graph.
+Pointers in trees can only go one direction,
+mainly from the root to the leaves.
+3. A subway system would be good to model with a graph.
+Or the carbon and water cycles.
+
+
+Performance of different data structures:
+
+Runtimes
+Data structure     Index    Seach   Add-R   Add-L   Pop-L   Pop-R
+
+Python List (array) O(1)    O(n)    O(1)    O(n)    O(n)    O(1)
+Linked List         O(n)    O(n)    O(1)    O(1)    O(1)    O(n)
+Doubly-linked List  O(n)    O(n)    O(1)    O(1)    O(1)    O(1)
+Queue(as Array)     X       X       O(1)    X       O(n)    X
+Queue(as LL or DLL) X       X       O(1)    X       O(1)    X
+Stack(as Array, LL, or DLL) X       O(1)    X       X       O(1)
+Deque(as DLL)       X       X       O(1)    O(1)    O(1)    O(1)
+
+Runtime and memory
+Data Structure      Get     Add     Delete  Iterate Memory
+
+Dictionary(hash map) O(1)   O(1)    O(1)    O(n)    medium
+Set(hash map)       O(1)    O(1)    O(1)    O(n)    medium
+Binary Search Tree  O(log n) O(n)   O(n)    O(n)    a little
+Tree                O(n)    O(n)    O(n)    O(n)    a little
+
+
+Sorting:
+1. Bubble sort starts from index 0 and iterates to the last item in a list.
+It compares each item in the list to its neighbor.
+If the item is greater than its neighbor then the 2 items swap indeces.
+If not, the item keeps its index and
+bubble sort moves on to the next item in the list.
+
+2. Merge sort works recursively by merging already sorted lists.
+It usually starts from the middle and splits the list in half.
+It keeps splitting until each list only has 1 item in it,
+which is inherently sorted. As it closes its recusive loops,
+it compares each item in the 2 lists and orders them in a new list.
+
+3. Quick sort works recursively and works best on randomized data.
+A pivot point is picked, usually in the middle of the list.
+Every item gets sorted into lists either lower, higher, or equal to the pivot item.
+Then quicksort gets called recursively on the lower and higher lists
+until there is only one item in the list.
